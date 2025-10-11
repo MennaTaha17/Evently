@@ -1,4 +1,5 @@
 import 'package:evently/common/theme/app_theme.dart';
+import 'package:evently/home/main_layer_screen.dart';
 import 'package:evently/screens/auth/login_screen.dart';
 import 'package:evently/screens/auth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,9 +19,12 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginScreen.routeName:(_)=> LoginScreen(),
         SignUpScreen.routeName:(_)=> SignUpScreen(),
+        MainLayerScreen.routeName:(_)=> MainLayerScreen(),
       },
       theme: AppThemes.lightTheme,
-     initialRoute: LoginScreen.routeName,
+      darkTheme: AppThemes.darkTheme,
+      themeMode: ThemeMode.light,
+     initialRoute: MainLayerScreen.routeName,
     );
   }
 }

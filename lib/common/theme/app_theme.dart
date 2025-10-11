@@ -8,6 +8,8 @@ class AppThemes{
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor,primary: AppColors.mainColor),
     hintColor: AppColors.grayColor,
     hoverColor: AppColors.grayColor,
+    focusColor: AppColors.lightBgColor,
+    splashColor:AppColors.mainColor ,
     iconTheme: IconThemeData(color: AppColors.mainColor),
     appBarTheme: AppBarTheme(color: AppColors.lightBgColor,
     centerTitle: true,
@@ -18,6 +20,19 @@ class AppThemes{
       ),
     ),
 textTheme: _getTextTheme(AppColors.lightTextColor),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      elevation: 0,
+      backgroundColor: AppColors.mainColor,
+      selectedItemColor: AppColors.lightBgColor,
+      unselectedItemColor: AppColors.lightBgColor,
+      showSelectedLabels: true,
+      showUnselectedLabels: false,
+      type: BottomNavigationBarType.fixed,
+      selectedLabelStyle: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
   );
 ////////////////////////////////////////////////////////////////////////////////////
   static ThemeData darkTheme = ThemeData(
@@ -26,6 +41,8 @@ textTheme: _getTextTheme(AppColors.lightTextColor),
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor,primary: AppColors.mainColor),
     hintColor: AppColors.mainColor,
     hoverColor: AppColors.darkTextColor,
+    focusColor: AppColors.mainColor,
+    splashColor:AppColors.lightBgColor ,
     iconTheme: IconThemeData(color: AppColors.mainColor),
     appBarTheme: AppBarTheme(color: AppColors.darkBgColor,
       centerTitle: true,
@@ -36,6 +53,19 @@ textTheme: _getTextTheme(AppColors.lightTextColor),
       ),
     ),
     textTheme: _getTextTheme(AppColors.darkTextColor),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      elevation: 20,
+      backgroundColor: AppColors.darkBgColor,
+      selectedItemColor: AppColors.lightBgColor,
+      unselectedItemColor: AppColors.lightBgColor,
+      showSelectedLabels: true,
+      showUnselectedLabels: false,
+      type: BottomNavigationBarType.fixed,
+      selectedLabelStyle: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
   );
 
 }
