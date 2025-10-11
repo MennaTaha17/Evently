@@ -23,7 +23,7 @@ class SignUpScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Assets.images.png.eventlyImage.image(height: 140, width: 140),
+              Assets.images.png.imEvently.image(height: 140, width: 140),
               Text(
                 'Evently', //TODo localization
                 style: TextStyle(
@@ -41,21 +41,21 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(height: 16),
               CustomTextField(
                 hintText: 'Email', //TODo localization
-                prefixIcon: Assets.images.svg.emailIcon.svg(
+                prefixIcon: Assets.images.svg.icEmail.svg(
                   color: Theme.of(context).hoverColor,
                 ),
               ),
               SizedBox(height: 16),
               CustomTextField(
                 hintText: 'Password', //TODo localization
-                prefixIcon: Assets.images.svg.passwordIcon.svg(
+                prefixIcon: Assets.images.svg.icPassword.svg(
                   color: Theme.of(context).hoverColor,
                 ),
               ),
               SizedBox(height: 16),
               CustomTextField(
                 hintText: 'Re Password', //TODo localization
-                prefixIcon: Assets.images.svg.emailIcon.svg(
+                prefixIcon: Assets.images.svg.icEmail.svg(
                   color: Theme.of(context).hoverColor,
                 ),
               ),

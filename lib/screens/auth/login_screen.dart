@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Assets.images.png.eventlyImage.image(height: 140, width: 140),
+                Assets.images.png.imEvently.image(height: 140, width: 140),
                 //Image.asset(Assets.images.png.eventlyImage.path),
                 Text(
                   'Evently', //TODo localization
@@ -37,14 +37,14 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 24),
                 CustomTextField(
                   hintText: 'Email', //TODo localization
-                  prefixIcon: Assets.images.svg.emailIcon.svg(
+                  prefixIcon: Assets.images.svg.icEmail.svg(
                     color: Theme.of(context).hoverColor,
                   ),
                 ),
                 SizedBox(height: 16),
                 CustomTextField(
                   hintText: 'Password', //TODo localization
-                  prefixIcon: Assets.images.svg.passwordIcon.svg(
+                  prefixIcon: Assets.images.svg.icPassword.svg(
                     color: Theme.of(context).hoverColor,
                   ),
                 ),

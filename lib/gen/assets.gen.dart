@@ -27,41 +27,119 @@ class $AssetsImagesGen {
 class $AssetsImagesPngGen {
   const $AssetsImagesPngGen();
 
-  AssetGenImage get eventlyImage =>
-      const AssetGenImage('assets/images/png/im_evently.png');
-
+  /// File path: assets/images/png/ar_icon.png
   AssetGenImage get arIcon =>
       const AssetGenImage('assets/images/png/ar_icon.png');
 
+  /// File path: assets/images/png/birthday.png
+  AssetGenImage get birthday =>
+      const AssetGenImage('assets/images/png/birthday.png');
+
+  /// File path: assets/images/png/eating.png
+  AssetGenImage get eating =>
+      const AssetGenImage('assets/images/png/eating.png');
+
+  /// File path: assets/images/png/en_icon.png
   AssetGenImage get enIcon =>
       const AssetGenImage('assets/images/png/en_icon.png');
+
+  /// File path: assets/images/png/im_evently.png
+  AssetGenImage get imEvently =>
+      const AssetGenImage('assets/images/png/im_evently.png');
+
+  /// File path: assets/images/png/meeting.png
+  AssetGenImage get meeting =>
+      const AssetGenImage('assets/images/png/meeting.png');
+
+  /// File path: assets/images/png/sport.png
+  AssetGenImage get sport => const AssetGenImage('assets/images/png/sport.png');
+
+  /// File path: assets/images/png/work_shop.png
+  AssetGenImage get workShop =>
+      const AssetGenImage('assets/images/png/work_shop.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [eventlyImage];
+  List<AssetGenImage> get values => [
+    arIcon,
+    birthday,
+    eating,
+    enIcon,
+    imEvently,
+    meeting,
+    sport,
+    workShop,
+  ];
 }
 
 class $AssetsImagesSvgGen {
   const $AssetsImagesSvgGen();
 
-
-  SvgGenImage get emailIcon => const SvgGenImage('assets/images/svg/ic_email.svg');
-
-  SvgGenImage get passwordIcon => const SvgGenImage('assets/images/svg/ic_password.svg');
-
+  /// File path: assets/images/svg/Sun.svg
+  SvgGenImage get sun => const SvgGenImage('assets/images/svg/Sun.svg');
 
   /// File path: assets/images/svg/google_icon.svg
   SvgGenImage get googleIcon =>
       const SvgGenImage('assets/images/svg/google_icon.svg');
 
+  /// File path: assets/images/svg/ic_email.svg
+  SvgGenImage get icEmail =>
+      const SvgGenImage('assets/images/svg/ic_email.svg');
+
+  /// File path: assets/images/svg/ic_password.svg
+  SvgGenImage get icPassword =>
+      const SvgGenImage('assets/images/svg/ic_password.svg');
+
   /// File path: assets/images/svg/person_icon.svg
   SvgGenImage get personIcon =>
       const SvgGenImage('assets/images/svg/person_icon.svg');
 
+  /// File path: assets/images/svg/sel_fav_ic.svg
+  SvgGenImage get selFavIc =>
+      const SvgGenImage('assets/images/svg/sel_fav_ic.svg');
+
+  /// File path: assets/images/svg/sel_home_ic.svg
+  SvgGenImage get selHomeIc =>
+      const SvgGenImage('assets/images/svg/sel_home_ic.svg');
+
+  /// File path: assets/images/svg/sel_map_ic.svg
+  SvgGenImage get selMapIc =>
+      const SvgGenImage('assets/images/svg/sel_map_ic.svg');
+
+  /// File path: assets/images/svg/sel_per_ic.svg
+  SvgGenImage get selPerIc =>
+      const SvgGenImage('assets/images/svg/sel_per_ic.svg');
+
+  /// File path: assets/images/svg/un_sel_fav_ic.svg
+  SvgGenImage get unSelFavIc =>
+      const SvgGenImage('assets/images/svg/un_sel_fav_ic.svg');
+
+  /// File path: assets/images/svg/un_sel_home_ic.svg
+  SvgGenImage get unSelHomeIc =>
+      const SvgGenImage('assets/images/svg/un_sel_home_ic.svg');
+
+  /// File path: assets/images/svg/un_sel_map_icon.svg
+  SvgGenImage get unSelMapIcon =>
+      const SvgGenImage('assets/images/svg/un_sel_map_icon.svg');
+
+  /// File path: assets/images/svg/un_sel_per_ic.svg
+  SvgGenImage get unSelPerIc =>
+      const SvgGenImage('assets/images/svg/un_sel_per_ic.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
+    sun,
     googleIcon,
+    icEmail,
+    icPassword,
     personIcon,
-    emailIcon,
-    passwordIcon,
+    selFavIc,
+    selHomeIc,
+    selMapIc,
+    selPerIc,
+    unSelFavIc,
+    unSelHomeIc,
+    unSelMapIcon,
+    unSelPerIc,
   ];
 }
 
