@@ -51,6 +51,10 @@ class $AssetsImagesPngGen {
   AssetGenImage get meeting =>
       const AssetGenImage('assets/images/png/meeting.png');
 
+  /// File path: assets/images/png/route_logo.png
+  AssetGenImage get routeLogo =>
+      const AssetGenImage('assets/images/png/route_logo.png');
+
   /// File path: assets/images/png/sport.png
   AssetGenImage get sport => const AssetGenImage('assets/images/png/sport.png');
 
@@ -66,6 +70,7 @@ class $AssetsImagesPngGen {
     enIcon,
     imEvently,
     meeting,
+    routeLogo,
     sport,
     workShop,
   ];
@@ -73,9 +78,6 @@ class $AssetsImagesPngGen {
 
 class $AssetsImagesSvgGen {
   const $AssetsImagesSvgGen();
-
-  /// File path: assets/images/svg/Sun.svg
-  SvgGenImage get sun => const SvgGenImage('assets/images/svg/Sun.svg');
 
   /// File path: assets/images/svg/google_icon.svg
   SvgGenImage get googleIcon =>
@@ -109,6 +111,9 @@ class $AssetsImagesSvgGen {
   SvgGenImage get selPerIc =>
       const SvgGenImage('assets/images/svg/sel_per_ic.svg');
 
+  /// File path: assets/images/svg/sun.svg
+  SvgGenImage get sun => const SvgGenImage('assets/images/svg/sun.svg');
+
   /// File path: assets/images/svg/un_sel_fav_ic.svg
   SvgGenImage get unSelFavIc =>
       const SvgGenImage('assets/images/svg/un_sel_fav_ic.svg');
@@ -117,9 +122,9 @@ class $AssetsImagesSvgGen {
   SvgGenImage get unSelHomeIc =>
       const SvgGenImage('assets/images/svg/un_sel_home_ic.svg');
 
-  /// File path: assets/images/svg/un_sel_map_icon.svg
-  SvgGenImage get unSelMapIcon =>
-      const SvgGenImage('assets/images/svg/un_sel_map_icon.svg');
+  /// File path: assets/images/svg/un_sel_map_ic.svg
+  SvgGenImage get unSelMapIc =>
+      const SvgGenImage('assets/images/svg/un_sel_map_ic.svg');
 
   /// File path: assets/images/svg/un_sel_per_ic.svg
   SvgGenImage get unSelPerIc =>
@@ -127,7 +132,6 @@ class $AssetsImagesSvgGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
-    sun,
     googleIcon,
     icEmail,
     icPassword,
@@ -136,9 +140,10 @@ class $AssetsImagesSvgGen {
     selHomeIc,
     selMapIc,
     selPerIc,
+    sun,
     unSelFavIc,
     unSelHomeIc,
-    unSelMapIcon,
+    unSelMapIc,
     unSelPerIc,
   ];
 }

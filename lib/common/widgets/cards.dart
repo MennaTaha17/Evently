@@ -1,13 +1,19 @@
 import 'package:evently/common/theme/app_colors.dart';
 import 'package:evently/gen/assets.gen.dart';
+import 'package:evently/models/category_model.dart';
+import 'package:evently/models/event_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class EventCards extends StatelessWidget {
-  const EventCards({super.key});
-
+  const EventCards({super.key, required this.eventModel});
+  final EventModel eventModel;
   @override
   Widget build(BuildContext context) {
+     String catImagePath =
+        CategoryModel.categories
+            .firstWhere((element) => element.id == eventModel.catId)
+            .designPath!;
     return Container(
       height: 200,
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -15,7 +21,7 @@ class EventCards extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         image: DecorationImage(
-          image: AssetImage(Assets.images.png.birthday.path),
+          image: AssetImage(catImagePath),
           fit: BoxFit.fill,
         ),
       ),
@@ -30,7 +36,7 @@ class EventCards extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
-              '22\nNov',
+              eventModel.data,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: AppColors.mainColor,
@@ -49,7 +55,7 @@ class EventCards extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'This is birthday party',
+                  eventModel.title,
                   textAlign: TextAlign.center,
                   style: Theme.of(
                     context,
@@ -61,7 +67,10 @@ class EventCards extends StatelessWidget {
                   child: IconButton(
                     padding: EdgeInsets.zero,
                     onPressed: () {},
-                    icon: Icon(Icons.favorite),
+                    icon: Icon(
+                      eventModel.isFav ? Icons.favorite : Icons.favorite_border,
+                      color: AppColors.mainColor,
+                    ),
                   ),
                 ),
               ],

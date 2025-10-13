@@ -1,11 +1,14 @@
 import 'package:evently/common/theme/app_colors.dart';
+import 'package:evently/home/fav_tab/fav_tab.dart';
 import 'package:evently/home/home_tab/home_tab.dart';
+import 'package:evently/home/settings_tab/settings_tab.dart';
+import 'package:evently/screens/new_event_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:evently/gen/assets.gen.dart';
 
 class MainLayerScreen extends StatefulWidget {
   const MainLayerScreen({super.key});
-  static const String routeName = '\main_layer';
+  static const String routeName = '/main_layer';
   @override
   State<MainLayerScreen> createState() => _MainLayerScreenState();
 }
@@ -15,8 +18,8 @@ class _MainLayerScreenState extends State<MainLayerScreen> {
   List<Widget> tab = [
     HomeTab(),
     Container(color: AppColors.mainColor),
-    Container(color: AppColors.mainColor),
-    Container(color: AppColors.mainColor),
+    FavTab(),
+   SettingsTab(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -27,7 +30,9 @@ class _MainLayerScreenState extends State<MainLayerScreen> {
         decoration: BoxDecoration(color: AppColors.lightBgColor,shape: BoxShape.circle),
         padding: EdgeInsets.all(2),
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed(NewEventScreen.routeName);
+          },
           backgroundColor:
               Theme.of(context).bottomNavigationBarTheme.backgroundColor,
           shape: CircleBorder(),
@@ -53,7 +58,7 @@ class _MainLayerScreenState extends State<MainLayerScreen> {
               label: 'Home', // ToDo Localization
             ),
             BottomNavigationBarItem(
-              icon: Assets.images.svg.unSelMapIcon.svg(),
+              icon: Assets.images.svg.unSelMapIc.svg(),
               activeIcon: Assets.images.svg.selMapIc.svg(),
               label: 'Map', // ToDo Localization
             ),
