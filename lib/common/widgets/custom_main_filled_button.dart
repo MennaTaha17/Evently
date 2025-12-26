@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
 class CustomMainFilledButton extends StatelessWidget {
-  const CustomMainFilledButton({super.key, required this.text});
+  const CustomMainFilledButton({super.key, required this.text, this.onPressed});
   final String text;
+  final void Function()? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -13,10 +15,13 @@ class CustomMainFilledButton extends StatelessWidget {
           child: SizedBox(
             height: 56,
             child: FilledButton(
-              style: FilledButton.styleFrom(backgroundColor: AppColors.mainColor,shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              )),
-              onPressed: () {},
+              style: FilledButton.styleFrom(
+                backgroundColor: AppColors.mainColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              onPressed: onPressed,
               child: Text(
                 text,
                 style: TextStyle(
